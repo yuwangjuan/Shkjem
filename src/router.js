@@ -7,17 +7,58 @@ let kejianrouter = new Router({
   routes: [{
       path: '/',
       name: 'home',
-      component: () => import('./views/Home.vue')
+      component: () => import('./views/Home.vue'),
+      meta:{
+        title:'首页'
+      }
     },
     {
       path: '/news',
       name: 'news',
       component: () => import('./views/News.vue'),
+      // meta:{
+      //   title:'前端'
+      // }
     },
     {
-      path: '/newsdetails/:id',
+      path: '/java',
+      name: 'java',
+      component: () => import('./views/java.vue'),
+      // meta:{
+      //   title:'java'
+      // }
+    },
+    {
+      path: '/csharp',
+      name: 'csharp',
+      component: () => import('./views/csharp.vue'),
+      // meta:{
+      //   title:'C++'
+      // }
+    },
+    {
+      path: '/python',
+      name: 'python',
+      component: () => import('./views/python.vue'),
+      // meta:{
+      //   title:'python'
+      // }
+    },
+    {
+      path: '/javascript',
+      name: 'javascript',
+      component: () => import('./views/javascript.vue'),
+      // meta:{
+      //   title:'javascript'
+      // }
+    },
+    {
+      path: '/newsdetails',
       name: 'newsdetails',
       component: () => import('./views/NewsDetails.vue'),
+      meta:{
+        title:'正文'
+      }
     },
     {
       path: '/product',

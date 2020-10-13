@@ -2,7 +2,7 @@
 <div>
   <div class="home" >
       <!-- <div class="search-box"> -->
-        <p class="title-item">前端</p>
+        <p class="title-item">Python</p>
       <!-- </div> -->
       
   </div>
@@ -11,7 +11,7 @@
     <div class="gallery-box">
         <p class="gallery-tip">网站只列出部分课件，没找到也可以联系客服人工代寻，QQ 2445981459 微信 hungpeng8</p>
       </div>
-      <div class="img-item" @click="showDetail">
+      <div class="img-item" @click="showDetailPy">
         <img src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" alt="">
         <p class="title">前端开发入门到实践</p>
         <p class="money"><span>￥29.9</span><span class="sale-num">销量：7</span></p>
@@ -56,7 +56,7 @@
 <script>
 
 export default {
-  name: "Home",
+  name: "python",
   components: {
    
   },
@@ -73,8 +73,8 @@ export default {
 
   },
   methods:{
-    showDetail(){
-      this.$router.push('/newsdetails')
+    showDetailPy(){
+      this.$router.push('./newsdetails')
     }
   }
 };

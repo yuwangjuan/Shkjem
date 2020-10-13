@@ -3,7 +3,9 @@
     <el-container>
       <el-header>
         <div class="logo">
-          <img src="./assets/img/toplogo.png" alt />
+          <!-- 鲸鱼图书 -->
+          <!-- <img src="./assets/img/logo.jpg" alt /> -->
+        鲸鱼图书
         </div>
         <el-menu
           :default-active="defaultActive"
@@ -13,12 +15,25 @@
           :router="router"
         >
           <el-menu-item index="/">首页</el-menu-item>
-          <el-menu-item index="/news">新闻资讯</el-menu-item>
-          <el-menu-item index="/product">产品中心</el-menu-item>
-          <el-menu-item index="/case">经典案例</el-menu-item>
-          <el-menu-item index="/goin">走进科建</el-menu-item>
-          <el-menu-item index="/download">下载APP</el-menu-item>
+          <!-- <el-menu-item index="/news">新闻资讯
+          </el-menu-item> -->
+          <el-submenu index="/news">
+          <template slot="title">课程分类</template>
+          <el-menu-item index="/news">前端</el-menu-item>
+          <el-menu-item index="/java">java</el-menu-item>
+          <el-menu-item index="/python">python</el-menu-item>
+          <el-menu-item index="/csharp">C++</el-menu-item>
+          <el-menu-item index="/javascript">javascript</el-menu-item>
+        </el-submenu>
+      <!-- </el-submenu> -->
+          <!-- <el-menu-item index="/case">最新课件</el-menu-item> -->
+          <el-menu-item index="/product">在线直播</el-menu-item>
+          <!-- <el-menu-item index="/goin">走进科建</el-menu-item> -->
+          <el-menu-item index="/login">登录</el-menu-item>
+          <!-- <el-menu-item index="/download">注册</el-menu-item>
+          <el-menu-item index="/download">登录</el-menu-item> -->
         </el-menu>
+        
       </el-header>
       <el-main>
         <router-view />
@@ -27,7 +42,7 @@
         <div class="footer-content">
           <ul class="content-nav">
             <li>
-              <p>走进科建</p>
+              <p>鲸鱼课堂</p>
               <span>发展历程</span>
               <span>企业文化</span>
               <span>资质荣誉</span>
@@ -68,14 +83,14 @@ export default {
     return {
       router: true,
       defaultActive: "/",
-      isShow: false
+      isShow: true
     };
   },
   methods: {
-    handleSelect(key) {
-      this.isShow = this.defaultActive != key;
-      window.console.log(this.isShow);
-    }
+    // handleSelect(key) {
+    //   this.isShow = this.defaultActive != key;
+    //   window.console.log(this.isShow);
+    // }
   }
 };
 </script>
@@ -108,6 +123,9 @@ body {
   .logo {
     width: 280px;
     padding: 10px;
+  text-align:center;
+  line-height: 60px;
+  font-weight: 600;
     img {
       width: 100%;
       line-height: 60px;

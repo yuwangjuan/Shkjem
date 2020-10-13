@@ -15,7 +15,9 @@ import VideoPlayer from 'vue-video-player'
 import 'video.js/dist/video-js.css'
 import 'vue-video-player/src/custom-theme.css'
 Vue.use(VideoPlayer)
-
+// 全局引入画廊
+import EleGallery from 'vue-ele-gallery'
+Vue.component(EleGallery.name, EleGallery)
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
   //完全显示的时候加载
